@@ -1,0 +1,1418 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark-light: #181818;
+
+    --white: #ffffff;
+    --off-white: #f5f5f2;
+
+    --accent: #c9ff3d;
+
+    --grey: #999999;
+
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--black);
+    color: var(--white);
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 10;
+}
+
+
+.nav {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+    color: var(--accent);
+}
+
+
+.nav nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.nav nav a {
+    color: #aaa;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s ease;
+}
+
+
+.nav nav a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 80px;
+
+    background:
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(201, 255, 61, 0.13),
+            transparent 25%
+        ),
+        var(--black);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+.eyebrow {
+    color: var(--accent);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+
+    max-width: 850px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #777;
+}
+
+
+.hero-description {
+    max-width: 520px;
+
+    color: #888;
+
+    font-size: 1rem;
+
+    margin-top: 35px;
+}
+
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+
+.hero-tags span {
+    padding: 8px 15px;
+
+    border: 1px solid var(--border);
+
+    color: #aaa;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   FLEXBOX SECTION
+========================= */
+
+.flex-section {
+    padding: 120px 0;
+
+    background: var(--off-white);
+
+    color: var(--black);
+}
+
+
+/* Section heading */
+
+.section-heading {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+
+.section-number {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 4rem;
+    font-weight: 600;
+
+    color: #d5d5d0;
+
+    line-height: 1;
+}
+
+
+.section-heading .eyebrow {
+    color: #718f22;
+}
+
+
+.section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(2.3rem, 4vw, 4rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.section-heading h2 span {
+    display: block;
+
+    color: #888;
+}
+
+
+.section-heading > div:last-child > p:last-child {
+    color: #777;
+
+    margin-top: 18px;
+
+    max-width: 550px;
+}
+
+
+/* =========================
+   FLEXBOX CARDS
+========================= */
+
+.flex-cards {
+
+    /* MAIN REQUIREMENT */
+    display: flex;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    gap: 20px;
+}
+
+
+/* Individual card */
+
+.flex-card {
+    position: relative;
+
+    /* Flexible width */
+    flex: 1;
+
+    min-width: 0;
+    min-height: 400px;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #deded8;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+.card-number {
+    color: #aaa;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 0.7rem;
+
+    margin-bottom: 65px;
+}
+
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--black);
+
+    color: var(--accent);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    transition: 0.35s ease;
+}
+
+
+.flex-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 12px;
+}
+
+
+.flex-card p {
+    color: #777;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 30px;
+}
+
+
+.flex-card a {
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+.flex-card a span {
+    font-size: 1.3rem;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+.flex-card:hover {
+    transform: translateY(-12px);
+
+    background: var(--black);
+    color: white;
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+.flex-card:hover p {
+    color: #aaa;
+}
+
+
+.flex-card:hover .card-icon {
+    background: var(--accent);
+
+    color: var(--black);
+
+    transform: rotate(-5deg);
+}
+
+
+.flex-card:hover a {
+    border-color: #333;
+
+    color: var(--accent);
+}
+
+
+.flex-card:hover a span {
+    transform: translateX(5px);
+}
+
+
+/* Middle card */
+
+.featured-card {
+    background: var(--black);
+    color: white;
+
+    transform: translateY(-15px);
+}
+
+
+.featured-card p {
+    color: #aaa;
+}
+
+
+.featured-card .card-icon {
+    background: var(--accent);
+    color: var(--black);
+}
+
+
+.featured-card a {
+    border-color: #333;
+    color: var(--accent);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+
+    .flex-cards {
+        gap: 15px;
+    }
+
+
+    .flex-card {
+        padding: 25px;
+
+        min-height: 380px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .nav nav {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 560px;
+    }
+
+
+    .hero h1 {
+        font-size: 4rem;
+
+        letter-spacing: -3px;
+    }
+
+
+    .section-heading {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .section-number {
+        font-size: 2.5rem;
+    }
+
+
+    /* REQUIRED MOBILE FLEXBOX BEHAVIOUR */
+
+    .flex-cards {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .flex-card {
+        width: 100%;
+
+        min-height: 350px;
+    }
+
+
+    .featured-card {
+        transform: none;
+    }
+
+
+    .flex-card:hover {
+        transform: translateY(-6px);
+    }
+
+}
+/* =========================
+   CSS GRID SECTION
+========================= */
+
+.grid-section {
+    padding: 120px 0;
+
+    background: #111111;
+    color: white;
+}
+
+
+.grid-heading .section-number {
+    color: #292929;
+}
+
+
+.grid-heading h2 span {
+    color: #666;
+}
+
+
+.grid-heading > div:last-child > p:last-child {
+    color: #777;
+}
+
+
+/* =========================
+   GRID CONTAINER
+========================= */
+
+.design-grid {
+
+    display: grid;
+
+    /*
+       repeat() is intentionally used here
+       as required by the assignment.
+    */
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: minmax(230px, auto);
+
+    gap: 15px;
+}
+
+
+/* =========================
+   GRID CARDS
+========================= */
+
+.grid-card {
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 25px;
+
+    background: #181818;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.grid-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(201, 255, 61, 0.45);
+
+    background: #1d1d1d;
+}
+
+
+/* Large card */
+
+.grid-card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    min-height: 475px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(201, 255, 61, 0.12),
+            transparent 30%
+        ),
+        #181818;
+}
+
+
+/* Wide card */
+
+.grid-card-wide {
+    grid-column: span 2;
+}
+
+
+/* Accent card */
+
+.accent-card {
+    background: var(--accent);
+    color: var(--black);
+
+    border-color: var(--accent);
+}
+
+
+.accent-card:hover {
+    background: #d4ff68;
+    border-color: #d4ff68;
+}
+
+
+.accent-card p {
+    color: #3c471f !important;
+}
+
+
+/* Dark card */
+
+.dark-grid-card {
+    background: #080808;
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.grid-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #666;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+}
+
+
+.accent-card .grid-top {
+    color: #4c591e;
+}
+
+
+/* =========================
+   GRID CONTENT
+========================= */
+
+.grid-content {
+    margin-top: auto;
+}
+
+
+.grid-content h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.5rem;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+.grid-card-large .grid-content h3 {
+    font-size: 2.5rem;
+}
+
+
+.grid-content p {
+    color: #777;
+
+    max-width: 420px;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   GRID ICON
+========================= */
+
+.grid-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--accent);
+    color: var(--black);
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   GRID STAT
+========================= */
+
+.grid-stat {
+    font-family: "Space Grotesk", sans-serif;
+
+    color: var(--accent);
+
+    font-size: 4rem;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   GRID SYMBOL
+========================= */
+
+.grid-symbol {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 4rem;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.accent-card .grid-symbol {
+    color: var(--black);
+}
+
+
+/* =========================
+   MINI GRID GRAPHIC
+========================= */
+
+.mini-layout {
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
+}
+
+
+.mini-layout span {
+    background: #303030;
+
+    border: 1px solid #444;
+}
+
+
+.mini-layout span:first-child {
+    grid-row: span 2;
+
+    background: var(--accent);
+}
+
+
+/* =========================
+   LAYOUT LINES
+========================= */
+
+.layout-lines {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 0.8fr 1fr;
+
+    gap: 7px;
+
+    margin-top: 30px;
+}
+
+
+.layout-lines span {
+    display: block;
+
+    height: 35px;
+
+    background: #292929;
+
+    border: 1px solid #383838;
+}
+
+
+.layout-lines span:first-child {
+    background: var(--accent);
+
+    border-color: var(--accent);
+}
+
+
+/* =========================
+   GRID TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .design-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .grid-card-large {
+        grid-column: span 2;
+    }
+
+
+    .grid-card-wide {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================
+   GRID MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .grid-section {
+        padding: 80px 0;
+    }
+
+
+    .design-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: auto;
+    }
+
+
+    .grid-card,
+    .grid-card-large,
+    .grid-card-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+
+        min-height: 280px;
+    }
+
+
+    .grid-card-large {
+        min-height: 380px;
+    }
+
+}
+/* =========================
+   ANIMATION SECTION
+========================= */
+
+.animation-section {
+    padding: 120px 0;
+
+    background: var(--off-white);
+
+    color: var(--black);
+}
+
+
+.animation-heading .section-number {
+    color: #d5d5d0;
+}
+
+
+.animation-heading .eyebrow {
+    color: #718f22;
+}
+
+
+/* =========================
+   ANIMATION GRID
+========================= */
+
+.animation-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.animation-card {
+    min-height: 480px;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #deded8;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.animation-card-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #aaa;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+}
+
+
+.animation-demo {
+    flex: 1;
+
+    min-height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.animation-info {
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.animation-info h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 5px;
+}
+
+
+.animation-info p {
+    color: #777;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   01 - BUTTON ANIMATION
+========================= */
+
+.animated-button {
+    position: relative;
+
+    width: 190px;
+    height: 60px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--black);
+    color: white;
+
+    overflow: hidden;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.animated-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--accent);
+
+    transition: left 0.35s ease;
+}
+
+
+.animated-button span {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.button-arrow {
+    font-size: 1.3rem;
+
+    transition: transform 0.35s ease;
+}
+
+
+.animated-button:hover {
+    color: var(--black);
+
+    transform: translateY(-4px);
+}
+
+
+.animated-button:hover::before {
+    left: 0;
+}
+
+
+.animated-button:hover .button-arrow {
+    transform: translateX(6px);
+}
+
+
+/* =========================
+   02 - LOADER
+========================= */
+
+.loader {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.loader span {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: var(--black);
+
+    animation:
+        loadingBounce 1s ease-in-out infinite;
+}
+
+
+.loader span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+
+.loader span:nth-child(3) {
+    animation-delay: 0.30s;
+}
+
+
+@keyframes loadingBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+
+        background: var(--black);
+    }
+
+
+    50% {
+        transform: translateY(-25px);
+
+        background: var(--accent);
+    }
+
+}
+
+
+/* =========================
+   03 - CARD LIFT
+========================= */
+
+.lift-demo {
+    width: 190px;
+    height: 190px;
+
+    padding: 25px;
+
+    background: var(--black);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.lift-demo > span {
+    color: var(--accent);
+
+    font-size: 0.6rem;
+
+    letter-spacing: 3px;
+}
+
+
+.lift-demo strong {
+    margin-top: auto;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 1.5rem;
+}
+
+
+.lift-demo div {
+    margin-top: 8px;
+
+    color: var(--accent);
+
+    font-size: 1.5rem;
+
+    transition: transform 0.4s ease;
+}
+
+
+.lift-demo:hover {
+    transform:
+        translateY(-15px)
+        rotate(-2deg);
+
+    box-shadow:
+        20px 25px 0 var(--accent);
+}
+
+
+.lift-demo:hover div {
+    transform:
+        translate(7px, -7px);
+}
+
+
+/* =========================
+   04 - ORBIT ANIMATION
+========================= */
+
+.orbit {
+    position: relative;
+
+    width: 170px;
+    height: 170px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.orbit-center {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--black);
+    color: var(--accent);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-weight: 700;
+}
+
+
+.orbit-dot {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    animation:
+        orbitRotation 4s linear infinite;
+}
+
+
+.orbit-dot::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    top: -10px;
+    left: calc(50% - 10px);
+
+    border: 3px solid var(--black);
+}
+
+
+@keyframes orbitRotation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 65px 0;
+
+    background: #080808;
+
+    border-top: 1px solid #222;
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.footer-content > div:first-child > p {
+    color: #666;
+
+    margin-top: 12px;
+
+    font-size: 0.8rem;
+}
+
+
+.footer-right {
+    text-align: right;
+
+    color: #666;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   ANIMATION RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .animation-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .animation-section {
+        padding: 80px 0;
+    }
+
+
+    .animation-card {
+        min-height: 430px;
+
+        padding: 22px;
+    }
+
+
+    .animation-demo {
+        min-height: 240px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+
+    .footer-right {
+        text-align: left;
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

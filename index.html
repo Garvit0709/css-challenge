@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="CSS Design Lab demonstrating Flexbox, CSS Grid and modern CSS animations.">
+
+    <title>CSS Design Lab | Flexbox, Grid & Animation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                CSS<span>LAB</span>
+            </a>
+
+            <nav>
+                <a href="#flexbox">Flexbox</a>
+                <a href="#grid">Grid</a>
+                <a href="#animation">Animation</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <p class="eyebrow">FRONTEND CSS CHALLENGE</p>
+
+                <h1>
+                    CSS
+                    <span>Design Lab.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Exploring modern layouts and interactions using
+                    Flexbox, CSS Grid and CSS animations.
+                </p>
+
+                <div class="hero-tags">
+                    <span>Flexbox</span>
+                    <span>CSS Grid</span>
+                    <span>Responsive</span>
+                    <span>Animation</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FLEXBOX ================= -->
+
+        <section class="flex-section" id="flexbox">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            FLEXBOX CHALLENGE
+                        </p>
+
+                        <h2>
+                            Flexible layouts.
+                            <span>Perfect alignment.</span>
+                        </h2>
+
+                        <p>
+                            A responsive three-card layout created
+                            using CSS Flexbox.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FLEXBOX CONTAINER -->
+
+                <div class="flex-cards">
+
+
+                    <!-- CARD 1 -->
+
+                    <article class="flex-card">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <div class="card-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>Clean Structure</h3>
+
+                        <p>
+                            Semantic HTML and organized components
+                            create a strong foundation for modern
+                            interfaces.
+                        </p>
+
+                        <a href="#">
+                            Explore
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD 2 -->
+
+                    <article class="flex-card featured-card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <div class="card-icon">
+                            ◫
+                        </div>
+
+                        <h3>Flexible Layout</h3>
+
+                        <p>
+                            Flexbox provides powerful alignment,
+                            spacing and responsive layout control
+                            across different screen sizes.
+                        </p>
+
+                        <a href="#">
+                            Explore
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD 3 -->
+
+                    <article class="flex-card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <div class="card-icon">
+                            ↗
+                        </div>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Flexible widths and media queries allow
+                            interfaces to adapt smoothly from desktop
+                            to mobile.
+                        </p>
+
+                        <a href="#">
+                            Explore
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ================= CSS GRID ================= -->
+
+<section class="grid-section" id="grid">
+
+    <div class="container">
+
+        <div class="section-heading grid-heading">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    CSS GRID CHALLENGE
+                </p>
+
+                <h2>
+                    Structured layouts.
+                    <span>Infinite possibilities.</span>
+                </h2>
+
+                <p>
+                    A responsive dashboard-style layout built using
+                    CSS Grid with six adaptive grid items.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRID CONTAINER -->
+
+        <div class="design-grid">
+
+
+            <!-- ITEM 1 -->
+
+            <article class="grid-card grid-card-large">
+
+                <div class="grid-top">
+                    <span>01</span>
+                    <span>FEATURED</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <div class="grid-icon">
+                        ◫
+                    </div>
+
+                    <h3>CSS Grid</h3>
+
+                    <p>
+                        Two-dimensional layouts provide precise
+                        control over rows, columns and responsive
+                        interface structures.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ITEM 2 -->
+
+            <article class="grid-card">
+
+                <div class="grid-top">
+                    <span>02</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <div class="grid-stat">
+                        12
+                    </div>
+
+                    <h3>Columns</h3>
+
+                    <p>
+                        Flexible column structures.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ITEM 3 -->
+
+            <article class="grid-card accent-card">
+
+                <div class="grid-top">
+                    <span>03</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <div class="grid-symbol">
+                        ↗
+                    </div>
+
+                    <h3>Responsive</h3>
+
+                    <p>
+                        Rearranges naturally across different
+                        screen sizes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ITEM 4 -->
+
+            <article class="grid-card">
+
+                <div class="grid-top">
+                    <span>04</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <div class="mini-layout">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <h3>Alignment</h3>
+
+                    <p>
+                        Consistent spacing across every component.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ITEM 5 -->
+
+            <article class="grid-card grid-card-wide">
+
+                <div class="grid-top">
+                    <span>05</span>
+                    <span>AUTO FIT</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <h3>Adaptive Layout</h3>
+
+                    <p>
+                        Using repeat(), minmax() and flexible grid
+                        sizing allows layouts to respond without
+                        sacrificing visual consistency.
+                    </p>
+
+                    <div class="layout-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ITEM 6 -->
+
+            <article class="grid-card dark-grid-card">
+
+                <div class="grid-top">
+                    <span>06</span>
+                </div>
+
+                <div class="grid-content">
+
+                    <div class="grid-symbol">
+                        +
+                    </div>
+
+                    <h3>Scalable</h3>
+
+                    <p>
+                        Easy to expand with additional components
+                        while preserving the layout system.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= ANIMATION CHALLENGE ================= -->
+
+<section class="animation-section" id="animation">
+
+    <div class="container">
+
+        <div class="section-heading animation-heading">
+
+            <div class="section-number">
+                03
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    ANIMATION CHALLENGE
+                </p>
+
+                <h2>
+                    Motion with
+                    <span>purpose.</span>
+                </h2>
+
+                <p>
+                    Subtle CSS interactions created using transitions,
+                    transforms and keyframe animations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="animation-grid">
+
+
+            <!-- 01 BUTTON ANIMATION -->
+
+            <article class="animation-card">
+
+                <div class="animation-card-top">
+
+                    <span>01</span>
+
+                    <span>TRANSITION</span>
+
+                </div>
+
+
+                <div class="animation-demo">
+
+                    <a href="#" class="animated-button">
+
+                        <span>Explore</span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="animation-info">
+
+                    <h3>Interactive Button</h3>
+
+                    <p>
+                        Hover interaction using transform
+                        and transition.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 02 LOADER -->
+
+            <article class="animation-card">
+
+                <div class="animation-card-top">
+
+                    <span>02</span>
+
+                    <span>KEYFRAMES</span>
+
+                </div>
+
+
+                <div class="animation-demo">
+
+                    <div class="loader">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="animation-info">
+
+                    <h3>Loading Animation</h3>
+
+                    <p>
+                        Continuous motion created using
+                        CSS keyframes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 03 CARD LIFT -->
+
+            <article class="animation-card">
+
+                <div class="animation-card-top">
+
+                    <span>03</span>
+
+                    <span>TRANSFORM</span>
+
+                </div>
+
+
+                <div class="animation-demo">
+
+                    <div class="lift-demo">
+
+                        <span>HOVER</span>
+
+                        <strong>
+                            Lift Me
+                        </strong>
+
+                        <div>
+                            ↗
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="animation-info">
+
+                    <h3>Card Lift</h3>
+
+                    <p>
+                        Elevation feedback using translateY
+                        and box-shadow.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 04 ROTATING SHAPE -->
+
+            <article class="animation-card">
+
+                <div class="animation-card-top">
+
+                    <span>04</span>
+
+                    <span>KEYFRAMES</span>
+
+                </div>
+
+
+                <div class="animation-demo">
+
+                    <div class="orbit">
+
+                        <div class="orbit-center">
+                            CSS
+                        </div>
+
+                        <div class="orbit-dot"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="animation-info">
+
+                    <h3>Orbit Motion</h3>
+
+                    <p>
+                        Smooth continuous rotation using
+                        keyframe animation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+
+            <a href="#" class="logo">
+                CSS<span>LAB</span>
+            </a>
+
+            <p>
+                Flexbox • Grid • Animation
+            </p>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <p>
+                CSS Challenge
+            </p>
+
+            <p>
+                © 2026
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
